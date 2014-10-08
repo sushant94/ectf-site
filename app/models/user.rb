@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     after_create :send_mail
 
     def send_mail
-        WelcomeMailer.delay.welcome(:email)
+        WelcomeMailer.delay.welcome(self.id)
     end
 
 end
