@@ -8,6 +8,7 @@ gem 'sqlite3', group: :development
 gem 'devise'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem 'unicorn-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
 # Use Uglifier as compressor for JavaScript assets
