@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Promosite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title>ECTF'14</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="navbar navbar-default ">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">ECTF</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+             <li><a href="#">About</a></li>
+              <li ><%= link_to "Newbie", "/newbie"%></li>
+         </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li ><%= link_to "Sign up", :new_user_registration %></li>
+                <% if user_signed_in? %>
+                <li ><%= link_to "Logout", :destroy_user_session, method: :delete %></li>
+                <li ><%= link_to "Welcome #{current_user.teamName}", "#" %></li>
+                <% else %>
+                <li ><%= link_to "Sign in", :new_user_session %></li>
+                <% end %>
 
-<%= yield %>
 
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <%= yield %>
+    </div>
 </body>
+<head>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</head>
 </html>

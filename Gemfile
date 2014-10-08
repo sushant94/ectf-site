@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0', :patchlevel => '247'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.rc1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
+gem 'devise'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
@@ -13,6 +14,7 @@ gem 'sass-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+gem 'sidekiq'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
