@@ -13,7 +13,7 @@ require 'mina/unicorn'
 
 set :domain, '176.58.110.226'
 set :deploy_to, '/home/deploy/ectf/'
-set :repository, '/home/sushant/Drive/ECTF/Z/promosite/.git'
+set :repository, 'https://github.com/sushant94/ectf-site.git'
 set :branch, 'master'
 set :user, 'deploy'
 set :forward_agent, true
