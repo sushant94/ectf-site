@@ -12,7 +12,7 @@ require 'mina/unicorn'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :domain, '176.58.110.226'
-set :deploy_to, '/home/deploy/ectf/'
+set :deploy_to, '/home/deploy/ectf'
 set :repository, 'https://github.com/sushant94/ectf-site.git'
 set :branch, 'master'
 set :user, 'deploy'
