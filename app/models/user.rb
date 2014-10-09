@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
-    # after_create :send_mail
+    after_create :send_mail
 
     def send_mail
         WelcomeMailer.delay.welcome(self.id)
