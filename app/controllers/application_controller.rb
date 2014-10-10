@@ -14,6 +14,7 @@ protected
     def configure_permitted_parameters
         devise_parameter_sanitizer.for(:sign_up) << :teamName
         devise_parameter_sanitizer.for(:sign_in) << :teamName
+        devise_parameter_sanitizer.for(:sign_up) << :organization
     end
 
 end
