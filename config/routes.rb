@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "static#root"
   get '/newbie' => 'static#newbie'
+  get '/faq' => 'static#faq'
 
   get '/sponsors' => 'static#sponsors'
   get '/rules' => 'static#rules'
