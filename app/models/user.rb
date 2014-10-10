@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
+    validates :teamName, uniqueness: true
     after_create :send_mail
 
     def send_mail

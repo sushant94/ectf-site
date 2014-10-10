@@ -1,13 +1,24 @@
 <div class="jumbotron" style="margin-top: -50px; padding-bottom: 10%; text-align: center;">
     <h1>ECTF'14</h1>
     <p><b>ECTF'14 </b>is a <b>beginner</b> level 'Capture The Flag' event organized by National Institute of Technology Karnataka for <%= link_to "Engineer'14","http://engineer.org.in/" %>.</p><br/>
-    <h2><%= link_to "Contest starts on 18th October 9:00 AM IST","http://www.timeanddate.com/worldclock/fixedtime.html?msg=ECTF%2714&iso=20141018T09&p1=54", target: "_blank" %> <br/>Duration: 48 hours <br/></h2><br/><br/>
+    <h2><%= link_to "Contest starts on 18th October 9:00 AM IST","http://www.timeanddate.com/worldclock/fixedtime.html?msg=ECTF%2714&iso=20141018T09&p1=54", target: "_blank" %> <br/>Duration: 32 hours <br/></h2><br/><br/>
     <p>New to CTF's and want to join in on the fun? Great! Just checkout our newbies page to see how to get started.</p>
-    <div class = "col-lg-6 col-lg-offset-4" style="margin-top:10px;">
+    <div class = "col-lg-6 col-lg-offset-4" style="margin-top:10px;margin-bottom:2%;">
         <% x = "disabled" if current_user %>
         <%= link_to "Sign up", "/users/sign_up", class: "btn btn-success col-lg-2 #{x}", style: "margin-right: 50px;" %>
         <%= link_to "Newbies", "/newbie", class: "btn btn-primary col-lg-2", style: "margin-right: 50px;" %>
         <%= link_to "Sign in", "/users/sign_in", class: "btn btn-warning col-lg-2 #{x}", style: "margin-right: 50px;" %>
     </div>
-</div>
 
+</div>
+<div class = "col-lg-7 col-lg-offset-5" style="padding-left: 1.5%;">
+    <div class="col-lg-1">
+        <%= link_to(image_tag("twitter.png", title: 'Follow on Twitter'), "https://twitter.com/nitkectf", target: '_blank') %>
+    </div>
+    <div class="col-lg-1">
+        <%= image_tag "irc.png", title: '#ectf on freenode' %>
+    </div>
+    <div class="col-lg-1">
+        <%= link_to(image_tag("fb.png", title: 'Like us on Facebook'), "https://www.facebook.com/nitkectf", target: '_blank') %></div>
+    </div>
+</div>

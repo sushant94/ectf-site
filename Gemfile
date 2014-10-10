@@ -5,8 +5,9 @@ gem 'rails', '4.1.0.rc1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 gem 'devise'
+
 gem 'pg', group: :production
-gem 'rails_12factor', group: :production
+
 gem 'unicorn'
 gem 'mina'
 gem 'mina-sidekiq', :require => false
