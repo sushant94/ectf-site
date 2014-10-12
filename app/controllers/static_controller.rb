@@ -29,7 +29,8 @@ class StaticController < ApplicationController
         end
         if current_user.confirmed && user.team.id == current_user.team.id
             if params[:type] == 'ignore'
-                WelcomeMailer.delay.ignored(user.id)
+                user.destroy
+                WelcomeMailer.delay.ignored(user)
             else
                 user.confirmed = true
                 user.save

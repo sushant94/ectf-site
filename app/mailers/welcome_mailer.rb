@@ -11,10 +11,9 @@ class WelcomeMailer < ActionMailer::Base
     mail(:to => @user.email, :subject => "Important Notification - ECTF'14")
 end
 
-def ignored id
-    @user = User.find(id)
+def ignored user
+    @user  = user
     mail(:to => @user.email, :subject => "Membership to team #{@user.teamName} - ECTF'14")
-    @user.destroy
 end
 
 end
