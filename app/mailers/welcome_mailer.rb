@@ -13,7 +13,7 @@ end
 
 def ignored id
     @user = User.find(id)
-    mail(:to => @user.email, :subject => "Membership to team #{user.teamName} - ECTF'14")
+    mail(:to => @user.email, :subject => "Membership to team #{@user.teamName} - ECTF'14")
     @user.destroy
 end
 
