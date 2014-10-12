@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/sponsors' => 'static#sponsors'
   get '/rules' => 'static#rules'
+  get '/dashboard' => 'static#dashboard'
+  post '/confirm' => 'static#confirm'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

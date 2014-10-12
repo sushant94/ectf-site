@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+users = User.all
+users.each do |user|
+    t = Team.create(teamName: user.teamName)
+    user.team_id = t.id
+    user.confirmed = true
+    WelcomeMailer.delay.notify(user.id)
+    user.save
+end

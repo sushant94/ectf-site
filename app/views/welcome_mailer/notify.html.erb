@@ -1,0 +1,10 @@
+<p> Hello <%= @user.teamName %> </p>
+<p>Due to some confusions on registrations we are now allowing all members of a team to register on the site and join a particular team.</p>
+<p>Steps you need to follow:</p>
+<ul>
+    <li>Ask your team members to  <%= link_to "register", "http://ectf.in" %> on our site. </li>
+    <li>Fill in the TeamName with the same team name given by you. i.e. <%= @user.teamName %></li>
+    <li>Visit the dashboard to confirm his place in the team.</li>
+</ul>
+<p>Thank you and Happy Hacking!</p>
+<p>- ECTF Team</p>

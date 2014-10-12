@@ -1,0 +1,22 @@
+<% @members.each do |member| %>
+<div class="well col-lg-10 col-lg-offset-1">
+    <div class="col lg-6">
+        <h4> <%= member.email %> </h4>
+    </div>
+    <div class='col-lg-4'>
+        <% if !member.confirmed && current_user.confirmed %>
+        <p>Has requested to join your team.</p>
+        <div class='col-lg-4'>
+            <%= button_to "Accept", {controller: 'static', action: 'confirm', id: member.id, type: 'confirm'}, class: 'btn btn-success', method: :post  %>
+        </div>
+        <div class='col-lg-4'>
+            <%= button_to "Ignore", {controller: 'static', action: 'confirm', id: member.id, type: 'ignore'}, class: 'btn btn-warning', method: :post  %>
+        </div>
+        <% elsif member.confirmed %>
+        <p style="color:green;">Confirmed</p>
+        <% else %>
+        <p style="color:red;">Awaiting confirmation</p>
+        <% end %>
+    </div>
+</div>
+<% end %>
