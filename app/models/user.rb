@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
     attr_accessor :newTeam
 
+    validates :teamName, presence: true
+
     # validates :teamName, uniqueness: true
     after_create :createOrAddToTeam
     validate :checkTeam, on: :create
