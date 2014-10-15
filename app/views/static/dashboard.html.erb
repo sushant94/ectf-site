@@ -1,3 +1,6 @@
+<div class="col-lg-10 col-lg-offset-1">
+    <h1>Team: <%= current_user.team.teamName %></h1>
+</div>
 <% @members.each do |member| %>
 <div class="well col-lg-10 col-lg-offset-1">
     <div class="col lg-6">
@@ -20,3 +23,13 @@
     </div>
 </div>
 <% end %>
+<div class="col-lg-10 col-lg-offset-1 success" style="color:green; margin-top:50px;">
+    <h1>Steps to add Team members:</h1>
+    <ul>
+        <li>Ask you team members to register on the site with team name as <%= current_user.team.teamName %> (keep the checkbox to "create team" unchecked).</li>
+        <li>All requests to join your team are displayed on this page.</li>
+        <li>Confirm their membership!</li>
+    </ul>
+    <b>NOTE:</b> All confirmed members can confirm other team members. <br/>
+    If you need any help, mail us at <%= mail_to "ectf@enginner.org.in" %> or join us on #ectf on freenode.
+</div>
